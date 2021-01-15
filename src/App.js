@@ -10,12 +10,12 @@ import { Channel } from './components/Channel';
 
 if (!firebase.apps.length) {
 	firebase.initializeApp({
-		apiKey: 'AIzaSyAhFhO2Uc2n2Zji-cNvuHs27hTwMlTdi6Q',
-		authDomain: 'react-firebase-chat-kjor.firebaseapp.com',
-		projectId: 'react-firebase-chat-kjor',
-		storageBucket: 'react-firebase-chat-kjor.appspot.com',
-		messagingSenderId: '636119235121',
-		appId: '1:636119235121:web:1b9fa0b11ad82a168e7310',
+		apiKey: process.env.API_KEY,
+		authDomain: process.env.AUTH_DOMAIN,
+		projectId: process.env.PROJECT_ID,
+		storageBucket: process.env.STORAGE_BUCKET,
+		messagingSenderId: process.env.MESSAGING_SENDER_ID,
+		appId: process.env.APP_ID,
 	});
 } else {
 	firebase.app(); // if already initialized, use that one
